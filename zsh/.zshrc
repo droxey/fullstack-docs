@@ -1,66 +1,45 @@
-# ===
 # zsh Config:
-# ===
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
 fpath=(/usr/local/share/zsh-completions $fpath)
 plugins=(colorize docker git virtualenv zsh-iterm-touchbar emoji-cli auto-ls zsh-wakatime)
 
-# ===
 # User Config:
-# ===
 export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export SLACK_TOKEN="xoxp-184893978580-216888589970-275566207303-2bc1683518c2b01a628cdaba3c7062d7"
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
 export PYTHON="/usr/local/opt/python/libexec/bin/python"
 source $ZSH/oh-my-zsh.sh
 
-# ===
 # PATH Amendments:
-# ===
 export PATH="/usr/local/opt/yarn/bin:$PATH"
 export PATH="/usr/local/bin/yarn:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
 
-
-# ===
 # VirtualEnv
-# ===
 export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.6/bin/python3
 export WORKON_HOME=~/.venv
 #source /usr/local/bin/virtualenvwrapper.sh
 
-# ===
-# Ruby
-# ===
-# OpenSSL:
+# Ruby / OpenSSL:
 export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 export LDFLAGS=-L/usr/local/opt/openssl/lib
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
-
-# ===
-# Ruby
-# ===
 eval "$(rbenv init -)"
 
-# ===
 # Editor Config:
-# ===
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='rmate'
 else
   export EDITOR='code'
 fi
 
-# ===
-# pyenv completions
-# ===
+# pyenv Completions:
 if [[ ! -o interactive ]]; then
     return
 fi
@@ -80,9 +59,7 @@ _pyenv() {
   reply=(${(ps:\n:)completions})
 }
 
-# ===
 # iTerm2 Integration:
-# ===
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 unalias imgcat
 
@@ -97,7 +74,6 @@ GIT_UNPULLED="⇣"
 GIT_UNPUSHED="⇡"
 
 ###-begin-npm-completion-###
-
 if type complete &>/dev/null; then
   _npm_completion () {
     local words cword
