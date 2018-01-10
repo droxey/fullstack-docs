@@ -23,13 +23,12 @@ This document describes a sample development workflow using a feature branch con
 ```
 
 ## Step by Step
+`[Note: run all commands that begin with ➜!]`
 
 
 ### Step 1
-_[Note: run all commands that begin with ➜!]_
-
-
 On your **local** machine, `cd` to the project directory. In git, this is known as your **working directory**, which was created when you executed git clone at the beginning of the project.
+
 ```
 dani@mbp:~
 ➜ cd ~/dev/repos/r3view
@@ -41,6 +40,7 @@ Update your **local** repository with the latest revision of `origin/master`.
 ```
 dani@mbp:dev/repos/r3view on master [$!] 
 ➜ git pull origin master
+
 remote: Counting objects: 6, done.
 remote: Total 6 (delta 2), reused 2 (delta 2), pack-reused 4
 Unpacking objects: 100% (6/6), done.
@@ -55,7 +55,6 @@ README.md | 25 ++++++++++++++++++-------
 
 
 ### Step 3
-
 Now that your **local** `master` branch is up-to-date with your team's latest changes, create a branch locally by __running the exact command__ below. There are other ways to do this, but __this one is foolproof__. This syntax creates a new branch named `frontend-tests` based on an existing branch, `master`.
 
 ```
@@ -78,15 +77,18 @@ dani@mbp:dev/repos/r3view on frontend-tests [$+]
 
 dani@mbp:dev/repos/r3view on frontend-tests [$+]
 ➜ git commit -m "added nightmarejs to package.json"
+
 [frontend-tests ebfe4a6] added nightmarejs to package.json
  8 files changed, 9 insertions(+), 8 deletions(-)
  ```
 
 ### Step 6
 Integrate upstream changes from `origin/master`, which adds them to our **local** branch.
+
 ```
 dani@mbp:dev/repos/r3view on frontend-tests [$+]
 ➜ git pull origin master
+
 From ssh://github.com/droxey/r3view
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
@@ -94,9 +96,11 @@ Already up-to-date.
 
 ### Step 7
 Push your new branch, as well as your changeset, to `origin/frontend-tests`.
+
 ```
 dani@mbp:dev/repos/r3view on frontend-tests
 ➜ git push origin `frontend-tests`
+
 Counting objects: 16, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (16/16), done.
