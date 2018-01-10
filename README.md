@@ -1,4 +1,4 @@
-# Berkeley Full Stack Coding Bootcamp: Documentation, Tips, and Tricks
+# Berkeley Coding Bootcamp: Documentation, Tips, and Tricks
 This repo contains documentation written during my tenure as an instructor at UC Berkeley. 
 
 ## Purpose 
