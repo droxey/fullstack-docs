@@ -1,0 +1,5 @@
+Host *
+ AddKeysToAgent yes
+ IdentityFile ~/.ssh/id_rsa
+ # Uncomment the following line to enable rmate on remote servers:
+ # RemoteForward 52698 localhost:52698
