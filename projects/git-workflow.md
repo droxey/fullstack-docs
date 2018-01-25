@@ -33,7 +33,7 @@ dani@mbp:~
 
 ### Step 2: 
 
-**Update **your** local repository with the latest revision of **`**origin/master**`**.**
+Update **your** local repository with the latest revision of **`origin/master`**.
 
 ```
 dani@mbp:dev/repos/r3view on master [$!] 
