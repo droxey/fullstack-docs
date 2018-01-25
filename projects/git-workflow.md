@@ -3,8 +3,8 @@
 **Successful teams follow 3 easy rules to integrate git into their daily workflow:**
 
 1. **Commit early and often.**
-2. **Don't break **`master`.The code in `origin/master` always works. No errors, no UI glitches. No exceptions.
-3. **Use feature branches. **One branch per feature.
+2. **Don't break `master`**. The code in `origin/master` always works. No errors, no UI glitches. No exceptions.
+3. **Use feature branches.** One branch per feature.
 
 This document describes a sample development workflow using a feature branch containing all the front-end tests for our project. This branch will be called `frontend-tests`, but no one has created it yet.
 
