@@ -8,12 +8,11 @@ heroku addons:create mongolab
 ```
 2. In your `server.js` file, amend your code to fit the following snippet:
 ```js
-// If deployed, use the deployed database.
-// Otherwise use the local mongoTasks database
+// If deployed, use the deployed database's connection string. 
+// Otherwise use the connection string for the local mongoTasks database.
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoTasks";
 
-// Set mongoose to use  built in JavaScript ES6 Promises
-// instead of the default callback mechanism.
+// Set mongoose to use  built in JavaScript ES6 Promises instead of the default callback mechanism.
 mongoose.Promise = Promise;
 
 // Connect to Mongo!
