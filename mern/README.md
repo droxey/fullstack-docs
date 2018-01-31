@@ -6,7 +6,7 @@
 ```bash
 heroku addons:create mongolab
 ```
-1. In your `server.js` file, amend your code to fit the following snippet:
+2. In your `server.js` file, amend your code to fit the following snippet:
 ```js
 // If deployed, use the deployed database.
 // Otherwise use the local mongoTasks database
