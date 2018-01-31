@@ -2,13 +2,17 @@
 
 ## Deployment
 ### Heroku: Deploying MongoDB
-1. In your project directory, run the following command to add the `mongolab` dependency to your Heroku app: 
+
+1. In your project directory, run the following command to add the `mongolab` dependency to your Heroku app:
+
 ```bash
 heroku addons:create mongolab
 ```
-2. In your `server.js` file, amend your code to fit the following snippet:
+
+1. In your `server.js` file, amend your code to fit the following snippet:
+
 ```js
-// If deployed, use the deployed database's connection string. 
+// If deployed, use the deployed database's connection string.
 // Otherwise use the connection string for the local mongoTasks database.
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoTasks";
 
@@ -19,3 +23,15 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
   useMongoClient: true
 });
+
+```
+
+1. Add, commit, and push to Heroku to complete database configuration:
+
+```bash
+
+git add .
+git commit -m "Deploying to Heroku."
+git push heroku master
+
+```
