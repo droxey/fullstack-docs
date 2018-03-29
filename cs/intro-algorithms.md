@@ -2,19 +2,19 @@
 
 ## Formal Definition
 
-* Set of **steps** that solve a problem/perform a calculation.
-* Algorithms seek to find new ways to solve the same problems:
+* Set of **steps** that **solve a problem/perform a calculation**.
+* Algorithms seek to find **new ways to solve the same problems**:
   - More efficiently.
   - Better handling of scale.
 
 ---
 
 
-## Linear Search [O(n)]
+## Linear Search [_O(n)_]
 
 A search algorithm that grows proportionate to the size of the array to be searched.
 
-### Strategy / Pseudocode
+### Pseudocode the Steps
 
 1. Iterate over the array (`listOfInts`).
 1. Check to see if the current number in the loop (`currentInt`) is equal to (`===`) the number we intended to find (`intToFind`).
@@ -22,9 +22,6 @@ A search algorithm that grows proportionate to the size of the array to be searc
 ### Implementation
 
 ```javascript
-const listOfInts = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
-const intToFind = listOfInts[Math.floor(Math.random() * listOfInts.length)];
-
 function linearSearch(listOfInts, intToFind) {
     listOfInts.forEach(function(currentInt, index) {
         if (currentInt === intToFind) {
@@ -34,14 +31,14 @@ function linearSearch(listOfInts, intToFind) {
 }
 
 // Test the function.
-const listOfInts = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+const listOfInts = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48];
 const intToFind = listOfInts[Math.floor(Math.random() * listOfInts.length)];
 linearSearch(listOfInts, intToFind);
 ```
 
 ---
 
-## Binary Search [O(n) / O(n log n)]
+## Binary Search [_Best: O(n)_ / _Worst: O(n log n)_]
 
 **Requires a pre-sorted array.** In each round, we check if the number we're trying is less than or more than the number we are looking for. This strategy allows programmers to effectively "halve" the number of options required in order to locate the target number.
 
@@ -49,11 +46,11 @@ linearSearch(listOfInts, intToFind);
 
 ### Pseudocode the Steps
 
-1. Sort the array (`listOfInts`).
-1. Find the number in middle of the array.
-1. Determine if the middle number is less than / more than the number we're attempting to find.
-1. Discard the half of the array that does not contain the number we're searching for.
-1. Repeat steps 2 through 4 until the target number is located.
+1. **Sort the array** (`listOfInts`).
+1. **Find** the **number in middle** of the array.
+1. Determine if the **middle number** is **less than / more than** the **number** we're attempting to find.
+1. **Discard** the **half of the array** that **does not contain the number** we're searching for.
+1. **Repeat steps 2 through 4** until the target number is located.
 
 ### Implementation
 
@@ -108,10 +105,10 @@ else {
 
 ### Pseudocode the Steps
 
-1. Iterate over the array (`listOfInts`).
-1. Set the first unsorted number as the minimum.
-1. If the current number is LESS THAN the current minimum (as set in step 2), then set the current number as the new minimum.
-1. Swap the minimum with the first unsorted position in the array.
+1. **Iterate** over the array (`listOfInts`).
+1. Set the first **unsorted number** as the **minimum**.
+1. If the **current number** is **LESS THAN** the **current minimum** (as set in step 2), then **set the current number as the new minimum**.
+1. **Swap the minimum** with the **first unsorted position** in the array.
 
 
 ### Implementation
@@ -141,11 +138,17 @@ function selectionSort(listOfInts) {
     }
     return listOfInts;
 }
+
+// Test the function.
+const listOfInts = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+const intToFind = listOfInts[Math.floor(Math.random() * listOfInts.length)];
+const sortedArray = selectionSort(listOfInts);
+console.log(sortedArray);
 ```
 
 ---
 
-## Insertion Sort [O(n^2)]
+## Insertion Sort [_O(n^2)_]
 
 ### Pseudocode the Steps
 
@@ -180,11 +183,7 @@ function insertionSort(listOfInts) {
 
 // Test the function.
 const listOfInts = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
-const intToFind = listOfInts[Math.floor(Math.random() * listOfInts.length)];
-
-const sortedInts = insertionSort(listOfInts);
-console.log("Unsorted:", listOfInts);
-console.log("Sorted:", sortedInts);
+console.log(insertionSort(listOfInts));
 ```
 
 ---
@@ -195,10 +194,10 @@ console.log("Sorted:", sortedInts);
 
 ### Pseudocode the Steps
 
-1. Select a pivot number from the array.
-1. Create an array of values less than the pivot.
-1. Create an array of values greater than the pivot.
-1. Recursively sort left and right arrays, and insert the pivot into it's final position.
+1. **Select a pivot number** from the array.
+1. Create an array of **values less than the pivot**.
+1. Create an array of **values greater than the pivot**.
+1. **Recursively sort** left and right arrays, and **insert the pivot into it's final position**.
 
 ### Implementation
 
@@ -228,6 +227,9 @@ function quickSort(array) {
   // Equivalent of `return quicksort(left) + pivot + quicksort (right);` in the pseudocode
   return quickSort(left).concat(pivot, quickSort(right));
 }
+
+const listOfInts = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48];
+console.log(quickSort(listOfInts))
 ```
 
 ---
