@@ -57,45 +57,31 @@ linearSearch(listOfInts, intToFind);
 ### Implementation
 
 ```javascript
-function binarySearch(listOfInts, intToFind) {
-    let minIndex = 0,
-        maxIndex = listOfInts.length - 1,
-        currentIndex,
-        currentInt;
+var binarySearch = function (array, value) {
+    if (array.length === 0) return -1;
 
-    while (minIndex <= maxIndex) {
-        currentIndex = Math.floor((minIndex + maxIndex) / 2);
-        currentInt = listOfInts[currentIndex];
+    var guess,
+        min = 0,
+        max = array.length - 1;
 
-        if (currentInt < intToFind) {
-            // If the number is LESS THAN the number we're searching,
-            // for, then LOOK ABOVE this number in the array.
-            minIndex = currentIndex + 1;
-        }
-        else if (currentInt > intToFind) {
-            // If the number is GREATER THAN the number we're searching,
-            // for, then LOOK BELOW this number in the array.
-            maxIndex = currentIndex - 1;
-        }
-        else {
-            // We found it!
-            return currentIndex;
-        }
-
-        return false;
+    while (min <= max) {
+        guess = Math.floor((min + max) / 2);
+        if (array[guess] === value)
+            return guess;
+        else if (array[guess] < value)
+            min = guess + 1;
+        else
+            max = guess - 1;
     }
+
+    return -1;
 }
 
 // Test the function.
 const listOfInts = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
 const intToFind = listOfInts[Math.floor(Math.random() * listOfInts.length)];
 const foundIntAtThisIndex = binarySearch(listOfInts, intToFind);
-
-if (foundIntAtThisIndex) {
-    console.log("Found number (", intToFind, ") at index", foundIntAtThisIndex, ".");
-}
-else {
-    console.log("Failed to Find Number (", intToFind, ") in the listOfInts.");
+console.log("Found value:", foundIntAtThisIndex)
 }
 ```
 
