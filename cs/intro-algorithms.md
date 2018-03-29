@@ -1,5 +1,8 @@
 # Introduction to Algorithms
 
+⭐️ **[@droxey](https://github.com/droxey)'s favorite algorithm? _[Conway's Game of Life](http://web.stanford.edu/~cdebs/GameOfLife/)!_** ⭐ ️
+
+
 ## Formal Definition
 
 * Set of **steps** that **solve a problem/perform a calculation**.
@@ -8,7 +11,6 @@
   - Better handling of scale.
 
 ---
-
 
 ## Linear Search [_O(n)_]
 
