@@ -150,6 +150,8 @@ console.log(sortedArray);
 
 ## Insertion Sort [_O(n^2)_]
 
+[![insertion](images/insertion.gif)](https://visualgo.net/en/sorting)
+
 ### Pseudocode the Steps
 
 1. **Iterate** over the array (`listOfInts`).
@@ -163,26 +165,24 @@ console.log(sortedArray);
 
 ```javascript
 function insertionSort(listOfInts) {
-    let currentInt;         // The number currently being compared.
-    let unsortedIndex;      // The index into the first for loop -- the unsorted section.
-    let sortedIndex;        // The index into the second for loop -- the sorted section.
+    for (var i = 0; i < listOfInts.length; i++) {
+        let value = listOfInts[i];
 
-    for (unsortedIndex = 0; unsortedIndex < listOfInts.length; unsortedIndex++) {
-        currentInt = listOfInts[unsortedIndex];
-
-        // Whenever the value in the sorted section is GREATER THAN the value
-        // in the unsorted section, shift all items in the sorted section over by 1.
-        // This creates space in which to insert the number.
-        for (sortedIndex = (unsortedIndex - 1); sortedIndex > -1 && listOfInts[sortedIndex] > currentInt; j--;) {
-            listOfInts[sortedIndex + 1] = listOfInts[sortedIndex];
+        // Store the current item value so it can be placed right.
+        for (var j = i - 1; j > -1 && listOfInts[j] > value; j--) {
+            // Loop through the items in the sorted array (the items from the current to the beginning) and copy each item to the next one.
+            listOfInts[j + 1] = listOfInts[j];
         }
+
+        // The last item we've reached should now hold the value of the currently sorted item.
+        listOfInts[j + 1] = value;
     }
 
     return listOfInts;
 }
 
 // Test the function.
-const listOfInts = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+const listOfInts = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48];
 console.log(insertionSort(listOfInts));
 ```
 
