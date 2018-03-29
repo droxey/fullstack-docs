@@ -229,12 +229,16 @@ function quickSort(array) {
 }
 
 const listOfInts = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48];
-console.log(quickSort(listOfInts))
+console.log(quickSort(listOfInts));
 ```
 
 ---
 
 ## Additional Practice
 
-* [Interactive Quiz - Sorting Algortithms](https://visualgo.net/training?diff=Medium&n=7&tl=0&module=sorting)
-* [InterviewBit]()
+* [Visualgo - Interactive Quiz: Sorting Algortithms](https://visualgo.net/training?diff=Medium&n=7&tl=0&module=sorting)
+* [InterviewBit](https://www.interviewbit.com/)
+* [LeetCode](https://leetcode.com/problemset/)
+* [HackerRank: Practice Coding, Find Jobs](https://www.hackerrank.com)
+* [Project Euler: Code + Mathematics](https://projecteuler.com)
+* [InterviewCake: Practice Interview Questions](https://www.interviewcake.com)
