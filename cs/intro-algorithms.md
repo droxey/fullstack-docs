@@ -87,7 +87,7 @@ console.log("Found value:", listOfInts[foundIntAtThisIndex])
 
 ---
 
-## Selection Sort [Best: _O(n<sup>2</sup>)_ Worst: _O(n<sup>2</sup>)_*]
+## Selection Sort [Best: _O(n<sup>2</sup>)_ Worst: _O(n<sup>2</sup>)_]
 
 [![selection](images/selection-sort.gif)](https://visualgo.net/en/sorting)
 
@@ -136,7 +136,7 @@ console.log(sortedArray);
 
 ---
 
-## Insertion Sort [Best: _O(n)_ Worst: _O(n<sup>2</sup>)_*]
+## Insertion Sort [Best: _O(n)_ Worst: _O(n<sup>2</sup>)_]
 
 [![insertion](images/insertion.gif)](https://visualgo.net/en/sorting)
 
