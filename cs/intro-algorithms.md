@@ -12,7 +12,7 @@
 
 ---
 
-## Linear Search [_Best: O(1) Worst: O(n)_]
+## Linear Search [Best: _O(1)_ Worst: _O(n)_]
 
 A search algorithm that grows proportionate to the size of the array to be searched.
 
@@ -40,7 +40,7 @@ linearSearch(listOfInts, intToFind);
 
 ---
 
-## Binary Search [_Best: O(1) Worst: O(log n)_]
+## Binary Search [Best: _O(1)_ Worst: _O(log n)_]
 
 **Requires a pre-sorted array.** In each round, we check if the number we're trying is less than or more than the number we are looking for. This strategy allows programmers to effectively "halve" the number of options required in order to locate the target number.
 
@@ -87,7 +87,7 @@ console.log("Found value:", listOfInts[foundIntAtThisIndex])
 
 ---
 
-## Selection Sort [*_Best: O(n<sup>2</sup>) Worst: O(n<sup>2</sup>)_*]
+## Selection Sort [Best: _O(n<sup>2</sup>)_ Worst: _O(n<sup>2</sup>)_*]
 
 [![selection](images/selection-sort.gif)](https://visualgo.net/en/sorting)
 
@@ -136,7 +136,7 @@ console.log(sortedArray);
 
 ---
 
-## Insertion Sort [*_Best: O(n) Worst: O(n<sup>2</sup>)_*]
+## Insertion Sort [Best: _O(n)_ Worst: _O(n<sup>2</sup>)_*]
 
 [![insertion](images/insertion.gif)](https://visualgo.net/en/sorting)
 
@@ -176,7 +176,7 @@ console.log(insertionSort(listOfInts));
 
 ---
 
-## Quicksort [*_Best: `O(n log n)` Worst: `O(n<sup>2</sup>)`_*]
+## Quicksort [Best: _O(n log n)_ Worst: _O(n<sup>2</sup>)_]
 
 [![quicksort](images/quicksort.gif)](https://visualgo.net/en/sorting)
 
