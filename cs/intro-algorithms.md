@@ -12,7 +12,7 @@
 
 ---
 
-## Linear Search [_O(n)_]
+## Linear Search [_Best: `O(1)` Worst: `O(n)_]
 
 A search algorithm that grows proportionate to the size of the array to be searched.
 
@@ -40,7 +40,7 @@ linearSearch(listOfInts, intToFind);
 
 ---
 
-## Binary Search [_Best: O(n)_ / _Worst: O(n log n)_]
+## Binary Search [_Best: `O(1)` Worst: `O(log n)`_]
 
 **Requires a pre-sorted array.** In each round, we check if the number we're trying is less than or more than the number we are looking for. This strategy allows programmers to effectively "halve" the number of options required in order to locate the target number.
 
