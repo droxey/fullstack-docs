@@ -1,8 +1,11 @@
-# Berkeley Coding Bootcamp: Documentation, Tips, and Tricks
-This repo contains documentation written during my tenure as an instructor at UC Berkeley. These additional materials are original, open-source, and can be distributed freely; no copyrighted in-class materials are provided here. 
+<!-- TITLE: Berkeley Coding Bootcamp: Documentation, Tips, and Tricks -->
+<!-- SUBTITLE: Hand written docks for the Fullstack Web Development Bootcamp. -->
+
+# Documentation, Tips, and Tricks
+This repo contains documentation written during my tenure as an instructor at UC Berkeley. These additional materials are original, open-source, and can be distributed freely; no copyrighted in-class materials are provided here.
 
 
-## Purpose 
+## Purpose
 To provide current and future students with a centralized repository of:
   * Additional documentation
   * Resources

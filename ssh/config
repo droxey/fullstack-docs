@@ -1,5 +1,10 @@
+<!-- TITLE: SSH Config -->
+<!-- SUBTITLE: Sample SSH configuration. -->
+
+Add the following lines to `~/.ssh/config`:
+
+```bash
 Host *
  AddKeysToAgent yes
  IdentityFile ~/.ssh/id_rsa
- # Uncomment the following line to enable rmate on remote servers:
- # RemoteForward 52698 localhost:52698
+ ```

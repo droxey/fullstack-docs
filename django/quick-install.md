@@ -1,3 +1,6 @@
+<!-- TITLE:  Django: Quick Start -->
+<!-- SUBTITLE: Step by step installation, commands, tutorials, and resources for new Django developers. -->
+
 # Django: Quick Start
 
 ## Installation: Step by Step

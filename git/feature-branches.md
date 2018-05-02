@@ -1,3 +1,6 @@
+<!-- TITLE: Git Workflow: Feature Branches -->
+<!-- SUBTITLE: How to use feature branches to collaborate via git. -->
+
 # Git Workflow: Feature Branches
 
 ### Successful teams follow 3 easy rules to integrate git into their daily workflow:
@@ -38,7 +41,7 @@ dani@mbp:~
 Update your **local** repository with the latest revision of `origin/master`.
 
 ```
-dani@mbp:dev/repos/r3view on master [$!] 
+dani@mbp:dev/repos/r3view on master [$!]
 ➜ git pull origin master
 
 remote: Counting objects: 6, done.
@@ -111,7 +114,7 @@ To ssh://github.com/droxey/r3view.git
 [new branch]      `frontend-tests` -> `frontend-tests`
 ```
 
-This branch is now available on your `origin` – simply open up GitHub, GitLab, or Heroku to verify! When complete, ask your team lead to review your code and merge it to the `master` branch. 
+This branch is now available on your `origin` – simply open up GitHub, GitLab, or Heroku to verify! When complete, ask your team lead to review your code and merge it to the `master` branch.
 
 
 ## IMPORTANT!
