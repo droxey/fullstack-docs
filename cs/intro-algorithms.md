@@ -10,8 +10,6 @@
   - More efficiently.
   - Better handling of scale.
 
----
-
 ## Linear Search [Best: _O(1)_ Worst: _O(n)_]
 
 A search algorithm that grows proportionate to the size of the array to be searched.
